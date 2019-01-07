@@ -49,7 +49,6 @@ html, body {
 
 .toc-wrapper {
   transition: left 0.3s ease-in-out;
-
   overflow-y: auto;
   overflow-x: hidden;
   position: fixed;
@@ -58,8 +57,9 @@ html, body {
   left: 0;
   bottom: 0;
   width: $nav-width;
+  box-shadow: 1px 0 2px #eee;
   background-color: $nav-bg;
-  font-size: 13px;
+  font-size: 18px;
   font-weight: bold;
 
   // language selector for mobile devices
@@ -83,7 +83,7 @@ html, body {
 
     input {
       background: $nav-bg;
-      border-width: 0 0 1px 0;
+      border-width: 0 0 0 0;
       border-color: $search-box-border-color;
       padding: 6px 0 6px 20px;
       box-sizing: border-box;
@@ -92,6 +92,7 @@ html, body {
       outline: none;
       color: $nav-text;
       border-radius: 0; /* ios has a default border radius */
+      font-weight: 400;
     }
 
     &:before {
@@ -166,12 +167,12 @@ html, body {
   .toc-list-h2 {
     display: none;
     background-color: $nav-subitem-bg;
-    font-weight: 500;
+    font-weight: 400;
   }
 
   .toc-h2 {
     padding-left: $nav-padding + $nav-indent;
-    font-size: 12px;
+    font-size: 15px;
   }
 
   .toc-footer {
@@ -207,6 +208,8 @@ html, body {
   transition-property: background;
   transition-timing-function: linear;
   transition-duration: 130ms;
+  font-weight: 400;
+  line-height: 40px;
 }
 
 // button to show navigation on mobile devices
@@ -286,8 +289,8 @@ html, body {
     float:left;
     color: $lang-select-text;
     text-decoration: none;
-    padding: 0 10px;
-    line-height: 30px;
+    padding: 0 40px;
+    line-height: 70px;
     outline: 0;
 
     &:active, &:focus {
@@ -319,6 +322,7 @@ html, body {
   // to place content above the dark box
   position: relative;
   z-index: 30;
+  padding: 30px 0;
 
   &:after {
     content: '';
@@ -346,14 +350,9 @@ html, body {
 
   h1 {
     @extend %header-font;
-    font-size: 25px;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
+    font-size: 30px;
     margin-bottom: $h1-margin-bottom;
     margin-top: 2em;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
-    background-color: #fdfdfd;
   }
 
   h1:first-child, div:first-child + h1 {
